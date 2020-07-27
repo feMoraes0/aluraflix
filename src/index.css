@@ -14,12 +14,25 @@
   --backEnd: #00C86F;
 }
 
-html,
-body {
+html {
   margin: 0;
   padding: 0;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  --bodyPaddingTop: 94px;
+  padding-top: var(--bodyPaddingTop);
+}
+
+@media (max-width: 800px) {
+  body {
+    --bodyPaddingTop: 40px;
+    padding-top: var(--bodyPaddingTop);
+  }
+}
+
 a {
   color: inherit;
-} 
+}

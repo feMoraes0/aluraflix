@@ -1,14 +1,14 @@
-.Logo {
-  max-width: 168px;
-}
+import styled from 'styled-components';
 
-@media (max-width: 800px) {
-  .Logo {
+
+const Logo = styled.img`
+  max-width: 168px;
+  @media (max-width: 800px) {
     max-width: 105px;
   }
-}
+`;
 
-.Menu {
+const MenuContainer = styled.div`
   width: 100%;
   height: 94px;
   z-index: 100;
@@ -26,23 +26,15 @@
 
   background: var(--black);
   border-bottom: 2px solid var(--primary);
-}
-body {
-  --bodyPaddingTop: 94px;
-  padding-top: var(--bodyPaddingTop);
-}
-@media (max-width: 800px) {
-  .Menu {
+
+  @media (max-width: 800px) {
     height: 40px;
     justify-content: center;
   }
-  body {
-    --bodyPaddingTop: 40px;
-    padding-top: var(--bodyPaddingTop);
-  }
-}
+`;
 
-.ButtonLink {
+
+const ButtonLink = styled.a`
   color: var(--white);
   border: 1px solid var(--white);
   box-sizing: border-box;
@@ -56,14 +48,12 @@ body {
   text-decoration: none;
   display: inline-block;
   transition: opacity .3s;
-}
-.ButtonLink:hover,
-.ButtonLink:focus {
-  opacity: .5;
-}
+  &:hover,
+  &:focus {
+    opacity: .5;
+  }
 
-@media (max-width: 800px) {
-  a.ButtonLink {
+  @media (max-width: 800px) {
     position: fixed;
     left: 0;
     right: 0;
@@ -73,4 +63,6 @@ body {
     border: 0;
     text-align: center;
   }
-}
+`;
+
+export {ButtonLink, MenuContainer, Logo};
