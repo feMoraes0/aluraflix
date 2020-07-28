@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 
 const Logo = styled.img`
@@ -34,7 +35,7 @@ const MenuContainer = styled.div`
 `;
 
 
-const ButtonLink = styled.a`
+const ButtonLink = styled(Link)`
   color: var(--white);
   border: 1px solid var(--white);
   box-sizing: border-box;
